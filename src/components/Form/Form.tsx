@@ -1,15 +1,19 @@
-import './index.css'
+import "./index.css";
+import Input from "../Input/Input";
 const Form = () => {
+  const alerta = () => {
+    alert("aasd");
+  };
   return (
     <div className="flex w-full justify-center mt-10">
       <div className="p-4  container-form  item-center  bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <form>
+        <form onSubmit={() => alert("hola")}>
           <div className="grid-cc">
             <div className="relative z-0 mb-6 w-full group">
               <select
                 name="floating_type_cc"
                 id="floating_type_cc"
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-red-600 peer"
                 placeholder=" "
                 required
               >
@@ -19,130 +23,28 @@ const Form = () => {
               </select>
               <label
                 htmlFor="floating_last_name"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Document Type
               </label>
             </div>
-            <div className="relative z-0 mb-6 w-full group">
-              <input
-                type="number"
-                name="floating_identification"
-                id="floating_identification"
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-                required
-              />
-              <label
-                htmlFor="floating_identification"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >
-                Identifier
-              </label>
-            </div>
+
+            <Input type="number" id="identifier" value="Identifier"></Input>
           </div>{" "}
-          <div className="relative z-0 mb-6 w-full group">
-            <input
-              type="email"
-              name="floating_email"
-              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-              placeholder=" "
-              required
-            />
-            <label
-              htmlFor="floating_email"
-              className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >
-              Email address
-            </label>
-          </div>
-          <div className="relative z-0 mb-6 w-full group">
-            <input
-              type="tel"
-              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-              name="floating_phone"
-              id="floating_phone"
-              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-              placeholder=" "
-              required
-            />
-
-            <label
-              htmlFor="floating_phone"
-              className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >
-              Phone number (123-456-7890)
-            </label>
+          <Input type="email" id="email" value="Email"></Input>
+          <Input
+            type="number"
+            id="phone"
+            value="Phone number (123-456-7890)"
+            pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+          ></Input>
+          <div className="grid xl:grid-cols-2 xl:gap-6">
+            <Input type="text" id="firstName" value="First Name"></Input>
+            <Input type="text" id="lastName" value="Last name"></Input>
           </div>
           <div className="grid xl:grid-cols-2 xl:gap-6">
-            <div className="relative z-0 mb-6 w-full group">
-              <input
-                type="text"
-                name="floating_firstName"
-                id="floating_firstName"
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-                required
-              />
-              <label
-                htmlFor="floating_firstName"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >
-                First name
-              </label>
-            </div>
-            <div className="relative z-0 mb-6 w-full group">
-              <input
-                type="text"
-                name="floating_lastName"
-                id="floating_lastName"
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-                required
-              />
-              <label
-                htmlFor="floating_lastName"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >
-                Last name
-              </label>
-            </div>
-          </div>
-          <div className="grid xl:grid-cols-2 xl:gap-6">
-            <div className="relative z-0 mb-6 w-full group">
-              <input
-                type="password"
-                name="floating_password"
-                id="floating_password"
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-                required
-              />
-              <label
-                htmlFor="floating_password"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >
-                Password
-              </label>
-            </div>
-
-            <div className="relative z-0 mb-6 w-full group">
-              <input
-                type="password"
-                name="repeat_password"
-                id="floating_repeat_password"
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-                pattern="^[a-zA-Z]"
-                required
-              />
-              <label
-                htmlFor="floating_repeat_password"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >
-                Confirm password
-              </label>
-            </div>
+            <Input type="password" id="password" value="Password"></Input>
+            <Input type="password" id="rePassword" value="Re password"></Input>
           </div>
           <button
             type="submit"
