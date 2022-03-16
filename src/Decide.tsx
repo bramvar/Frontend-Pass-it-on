@@ -1,14 +1,17 @@
 import { useState } from "react"
-import App from "./App"
-import Register from "./Register"
+import UserRegisterForm from "./UserRegisterForm"
+import LogIn from "./LogIn"
 
-
-export default function Decide(){
+function Decide(){
     const [isActive,setActive] = useState(true)
-    const elem = (isActive) ?<App /> :<Register />
+
+    //const elem = (isActive) ?<UserRegisterForm /> :<Register />
+
     return(
         <div>
-            {elem}
+            {(isActive) ?<UserRegisterForm /> :<LogIn/>}
         </div>
     )
 }
+
+export default Decide

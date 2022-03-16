@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App from './App'
-import Register from './Register'
 import Decide from './Decide'
 //import 'flowbite' 
 
@@ -11,7 +9,7 @@ import Decide from './Decide'
 const isActive2 =()=>{
  // const [isActive, setIsActive] = React.useState(true)
 
-  const elem = (true) ? "<App />" :"<Register />"
+  const elem = (true) ? "<UserRegisterForm />" :"<Register />"
   
   return (
     <div>
@@ -24,7 +22,6 @@ const isActive2 =()=>{
 ReactDOM.render(
     <React.StrictMode>
         <Decide />
-      
     </React.StrictMode>,
 
     document.getElementById("root"))
