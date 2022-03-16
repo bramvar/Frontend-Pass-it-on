@@ -6,7 +6,7 @@ const Form = () => {
   };
   return (
     <div className="flex w-full justify-center mt-10">
-      <div className="p-4  container-form  item-center  bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+      <div className="p-4  container-form  item-center  bg-white rounded-lg border shadow-md sm:p-8">
         <form onSubmit={() => alert("hola")}>
           <div className="grid-cc">
             <SelectForm
