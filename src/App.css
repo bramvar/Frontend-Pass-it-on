@@ -14,7 +14,7 @@
 }
 .grid-cc{
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 6fr;
   gap: 10px;
 
 }
@@ -26,6 +26,8 @@
     width: 80%;
   }
 }
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
