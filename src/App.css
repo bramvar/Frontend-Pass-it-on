@@ -12,7 +12,20 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.grid-cc{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
 
+}
+.container-form{
+  width: 50%;
+}
+@media (max-width:750px) {
+  .container-form{
+    width: 80%;
+  }
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
