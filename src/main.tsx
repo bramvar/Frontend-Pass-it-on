@@ -3,13 +3,30 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import Register from './Register'
-import 'flowbite' 
+import Decide from './Decide'
+//import 'flowbite' 
 
-//const [isActive, setIsActive] = useState(true)
 
-function isActive2(){
-  const element = (false) ? <App /> : <Register />
-  return ReactDOM.render(element,document.getElementById("root"))
+
+const isActive2 =()=>{
+ // const [isActive, setIsActive] = React.useState(true)
+
+  const elem = (true) ? "<App />" :"<Register />"
+  
+  return (
+    <div>
+        {elem}
+    </div>
+  )
 }
 
-isActive2()
+
+ReactDOM.render(
+    <React.StrictMode>
+        <Decide />
+      
+    </React.StrictMode>,
+
+    document.getElementById("root"))
+
+    
