@@ -22,12 +22,12 @@ const Form = () => {
             pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
           ></Input>
           <div className="grid xl:grid-cols-2 xl:gap-6">
-            <Input type="text" id="firstName" value="First Name"></Input>
+            <Input type="text" id="firstName" value="First name"></Input>
             <Input type="text" id="lastName" value="Last name"></Input>
           </div>
           <div className="grid xl:grid-cols-2 xl:gap-6">
             <Input type="password" id="password" value="Password"></Input>
-            <Input type="password" id="rePassword" value="Re password"></Input>
+            <Input type="password" id="rePassword" value="Confirm password"></Input>
           </div>
           <button
             type="submit"
