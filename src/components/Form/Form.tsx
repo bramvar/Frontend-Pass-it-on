@@ -1,9 +1,7 @@
 import "./index.css";
 import { Input, SelectForm } from "../index";
 const Form = () => {
-  const alerta = () => {
-    alert("aasd");
-  };
+
   return (
     <div className="flex w-full justify-center mt-10">
       <div className="p-4  container-form  item-center  bg-white rounded-lg border shadow-md sm:p-8">
